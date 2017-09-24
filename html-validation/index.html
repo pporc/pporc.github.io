@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form validation on pure Html/Css</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<form action="#0">
+		<div>
+			<div class="user"></div>
+			<input type="text" name="firstname" id="firstname" placeholder=" " required>
+			<label for="firstname">First name</label>
+		</div>
+		<div>
+			<div class="user"></div>
+			<input type="text" name="lastname" id="lastname" placeholder=" " required>
+			<label for="lastname">Last name</label>
+		</div>
+		<div>
+			<div class="tel"></div>
+			<input type="tel" name="tel" id="tel" placeholder=" "
+			pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$" required>
+			<label for="tel">Telephone</label>
+			<div class="requirements"> Must be a valid telephone! <br> Format (012) 345 6789</div>
+		</div>
+		<div>
+			<div class="email"></div>
+			<input type="email" name="email" id="email" placeholder=" " required>
+			<label for="email">Email</label>
+			<div class="requirements"> Must be a valid email addres!</div>
+		</div>
+		<div>
+			<div class="pass"></div>
+			<input type="password" name="password" id="password" placeholder=" "
+			pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
+			<label for="password">Password</label>
+			<div class="requirements"> Must be a valid password!</div>
+		</div>
+		<input type="submit" value="Sign up"/>
+	</form>
+
+</body>
+</html>
